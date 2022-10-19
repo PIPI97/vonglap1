@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = Number(prompt('Nhập khoảng dưới :'));
+        let b = Number(prompt('Nhập khoảng trên: '));
+
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        let random = getRndInteger(a, b);
+        for (i = 1; i <= 3; i++) {
+            let num = Number(prompt(`Nhập số dự đoán lần ${i} : `));
+            if (num == random) {
+                alert('Chuẩn xác')
+                i += 5
+            }
+            else if (num < random) {
+                alert('Số lớn hơn ')
+            }
+            else {
+                alert('Số bé hơn ')
+            }
+        } if (i == 4) {
+            alert('Hết lượt dự đoán.')
+        }
+    </script>
+</body>
+
+</html>
